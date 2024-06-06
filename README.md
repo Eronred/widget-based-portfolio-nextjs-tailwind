@@ -1,4 +1,4 @@
-# My Portfolio
+# Widget-based Portfolio
 
 This is a portfolio project built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Framer Motion](https://www.framer.com/api/motion/). The portfolio is widget-based, allowing for easy customization and flexibility.
 
@@ -23,8 +23,6 @@ npx next dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying the widgets in the `components` directory. The page auto-updates as you edit the file.
 
 ## Built With
 
