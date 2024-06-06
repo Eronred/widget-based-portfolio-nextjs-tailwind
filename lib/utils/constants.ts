@@ -1,0 +1,1 @@
+export const web3walletAddress = '0x5775f66a765d323bEBD0Cd95F9Ae868ee4606AB3'

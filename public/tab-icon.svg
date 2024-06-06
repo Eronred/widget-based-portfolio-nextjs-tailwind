@@ -1,0 +1,25 @@
+<svg width="30" 
+height="39" viewBox="0 0 30 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_127_41)">
+                            <rect x="7.37427" y="2.65723" width="18.9091" height="26" rx="3.54545" transform="rotate(-8.0784 7.37427 2.65723)" fill="#F9FAFB" />
+                            <circle cx="11.0488" cy="5.41828" r="1.47727" transform="rotate(-8.0784 11.0488 5.41828)" fill="#EF4444" />
+                            <circle cx="14.559" cy="4.92005" r="1.47727" transform="rotate(-8.0784 14.559 4.92005)" fill="#22C55E" />
+                            <circle cx="18.0694" cy="4.42182" r="1.47727" transform="rotate(-8.0784 18.0694 4.42182)" fill="#EAB308" />
+                        </g>
+                        <rect x="7.54386" y="2.78466" width="18.6091" height="25.7" rx="3.39545" transform="rotate(-8.0784 7.54386 2.78466)" stroke="black" stroke-opacity="0.02" stroke-width="0.3" />
+                        <g clip-path="url(#clip1_127_41)">
+                            <rect y="13.1703" width="18.9091" height="26" rx="3.54545" transform="rotate(-15.3691 0 13.1703)" fill="#F3F4F6" />
+                            <circle cx="3.99517" cy="15.4427" r="1.47727" transform="rotate(-15.3691 3.99517 15.4427)" fill="#EF4444" />
+                            <circle cx="7.41387" cy="14.5031" r="1.47727" transform="rotate(-15.3691 7.41387 14.5031)" fill="#22C55E" />
+                            <circle cx="10.8326" cy="13.5634" r="1.47727" transform="rotate(-15.3691 10.8326 13.5634)" fill="#EAB308" />
+                        </g>
+                        <rect x="0.184391" y="13.2752" width="18.6091" height="25.7" rx="3.39545" transform="rotate(-15.3691 0.184391 13.2752)" stroke="black" stroke-opacity="0.02" stroke-width="0.3" />
+                        <defs>
+                            <clipPath id="clip0_127_41">
+                                <rect x="7.37427" y="2.65723" width="18.9091" height="26" rx="3.54545" transform="rotate(-8.0784 7.37427 2.65723)" fill="white" />
+                            </clipPath>
+                            <clipPath id="clip1_127_41">
+                                <rect y="13.1703" width="18.9091" height="26" rx="3.54545" transform="rotate(-15.3691 0 13.1703)" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
