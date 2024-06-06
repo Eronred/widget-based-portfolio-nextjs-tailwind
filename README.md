@@ -7,7 +7,7 @@ This is a portfolio project built with [Next.js](https://nextjs.org/), [Tailwind
 First, clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Eronred/widget-based-portfolio-nextjs-tailwind.git
 ```
 
 Then, install the dependencies:
