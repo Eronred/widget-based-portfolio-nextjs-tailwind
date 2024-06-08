@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import { Button } from '../components/button';
 import { Twitter, RefreshCcw, Copy, BookText } from "lucide-react";
 
 const LinearGradientGenerator: React.FC = () => {
@@ -30,11 +29,7 @@ const LinearGradientGenerator: React.FC = () => {
             <div
                 className='absolute top-4 z-50  right-4 '
             >
-                <Button
-                    variant={'icon'}
-                    icon=<RefreshCcw color='black' />
-                    onClick={generateGradient}>
-                </Button>
+               
             </div>
         </div>
     );

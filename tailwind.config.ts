@@ -23,6 +23,10 @@ const config: Config = {
         "github-heatmap": "#6E6E6E",
         "calendar-card": "radial-gradient(220.03% 220.03% at 173.43% -46.86%, #5C5C5C 0%, #000 100%)",
         "github-card": "linear-gradient(180deg, #000 0%, #50555B 100%, #50555B 100%)",
+        "github-brand": "#000",
+        "twitter-brand": "#FAFAFA",
+        "linkedin-brand": "#0A66C2",
+        "layers-brand": "#2a2a2a",
       },
       backgroundImage: {
         "calendar-card": "radial-gradient(220.03% 220.03% at 173.43% -46.86%, #5C5C5C 0%, #000 100%)",

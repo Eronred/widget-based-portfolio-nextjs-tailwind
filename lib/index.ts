@@ -93,3 +93,95 @@ export const notes = [
         content: "Track your favorite cryptocurrencies"
     },
 ]
+
+
+export const codeFiles = [
+    {
+        type: "rcquery",
+        name: "fetch.ts",
+        code: `const{isPending, error, data}= 
+        useQuery({
+    queryKey: ['repoData'],
+    queryFn: () =>
+      fetch(URL)
+      .then((res) =>
+        res.json(),
+      ),
+  })`,
+    },
+    {
+        type: "ts",
+        name: "UUID.ts",
+        code: `function generateUUID(): string {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx'
+    .replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16
+        |
+        0, v = c === 'x' ? r
+        : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}`
+    },
+    {
+        type: "ts",
+        name: "typeGuard.ts",
+        code: `function isString(test: any): test is string{
+    return typeof test === "string";
+}
+
+function example(foo: any){
+    if(isString(foo)){
+        console.log("It's a string!");
+        console.log(foo.length); // string function
+    }
+}`
+    },
+    {
+        type: "ts",
+        name: "mapped.ts",
+        code: `type ReadOnly<T> = {
+    readonly [P in keyof T]: T[P];
+}
+
+type ExampleType = {
+    id: number;
+    name: string;
+}
+
+type ReadOnlyExampleType = ReadOnly<ExampleType>;`
+    },
+    {
+        type: "ts",
+        name: "conditional.ts",
+        code: `type TypeName<T> =
+    T extends string ? "string" :
+    T extends number ? "number" :
+    T extends boolean ? "boolean" :
+    T extends undefined ? "undefined" :
+    T extends Function ? "function" :
+    "object";
+
+type T0 = TypeName<string>;  // "string"
+type T1 = TypeName<"a">;  // "string"
+type T2 = TypeName<true>;  // "boolean"
+type T3 = TypeName<() => void>;  // "function"
+type T4 = TypeName<string[]>;  // "object"`
+    },
+    {
+        type: "py",
+        name: "fetch.py",
+        code: `import requests
+
+    def fetch_data(url):
+        response = requests.get(url)
+        response.raise_for_status() 
+        return response.json()`
+    },
+    {
+        type: "py",
+        name: "list.py",
+        code: `numbers = [1, 2, 3, 4, 5]
+        squares = [number ** 2 for number in numbers]`
+    },
+]

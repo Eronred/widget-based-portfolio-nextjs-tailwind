@@ -80,7 +80,7 @@ const GithubHeatmap: React.FC = () => {
                 transition={{
                     staggerChildren: 0.09
                 }}
-                className='grid grid-cols-7 gap-2 '
+                className='grid grid-cols-7 gap-2'
             >
 
                 {data.map((value, index) => (

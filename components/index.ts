@@ -14,7 +14,7 @@ import Web3WalletWidget from '../components/widgets/web3-wallet-widget';
 import MacDock from '../components/mac-dock';
 import CalendarWidget from '../components/widgets/calendar-widget';
 import CodeWidget from '../components/widgets/code-widget';
-import HeadingText from '../components/heading-text';
+import ProfileIntroduction from './profile-introduction';
 import NotesWidget from '../components/widgets/notes-widget';
 
 export {
@@ -34,6 +34,6 @@ export {
     MacDock,
     CalendarWidget,
     CodeWidget,
-    HeadingText,
+    ProfileIntroduction,
     NotesWidget
 }

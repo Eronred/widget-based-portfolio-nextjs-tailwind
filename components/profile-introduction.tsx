@@ -1,12 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
 import AnimatedContentLink from './animated-text'
 
 
-export default function HeadingText() {
+const ProfileIntroduction = () => {
     return (
         <div className="row-span-1 sm:col-span-2">
-            <div className="text-2xl sm:text-4xl text-gray-80 text-left "
+            <div className="text-2xl sm:text-4xl text-gray-900 text-left "
                 style={{
                     lineHeight: '1.3',
                 }}
@@ -39,6 +38,4 @@ export default function HeadingText() {
     )
 }
 
-
-
-
+export default ProfileIntroduction

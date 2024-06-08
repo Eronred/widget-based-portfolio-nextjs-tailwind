@@ -15,10 +15,11 @@ import {
   MacDock,
   CalendarWidget,
   CodeWidget,
-  HeadingText,
+  ProfileIntroduction,
   NotesWidget
 } from '../components';
 
+import SocialMediaWidget from '../components/widgets/social-media-widget';
 import { notes } from '@/lib';
 
 
@@ -32,9 +33,10 @@ const Page: React.FC = () => {
         staggerChildren: 0.09
       }}
       className="grid gird-cols-2 gap-4 sm:grid-flow-dense sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4 sm:p-8">
-      <HeadingText />
-      <Web3WalletWidget />
+      <ProfileIntroduction />
+      <SocialMediaWidget />
       <CalendarWidget />
+      <Web3WalletWidget />
       <NotesWidget
         title="New Widgets"
         content={notes}
@@ -75,10 +77,6 @@ const Page: React.FC = () => {
       <CraftVideoCard
         videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2Fr1ugYyx6sO7LkZ0B-Screen%2520Recording%25202024-03-12%2520at%25201.41.25%25E2%2580%25AFPM.mov"
       />
-      <LargeGridCard
-        title="Generate Linear card">
-        <LinearGradientGenerator />
-      </LargeGridCard>
       <CraftVideoCard
         videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2F3acNdbIyAiKQ9t1F-ssstwitter.com_1684246557937.mp4"
       />

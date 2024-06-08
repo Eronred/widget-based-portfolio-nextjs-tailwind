@@ -46,8 +46,6 @@ const SwipeCarouselWidget = () => {
     const [open, setIsOpen] = useState<boolean>(true);
     const y = useMotionValue(0);
 
-    console.log()
-
     const handleClose = async () => {
         const yStart = typeof y.get() === "number" ? y.get() : 0;
         await animate("#sheet", {
