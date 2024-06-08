@@ -109,10 +109,10 @@ const CodeWidget = () => {
     return (
         <motion.div
             variants={moveInAnimationVariant}
-            className="aspect-ratio w-full h-full bg-small-grid-card rounded-3xl overflow-hidden relative"
+            className="aspect-ratio bg-small-grid-card rounded-3xl overflow-hidden relative"
         >
             <motion.div
-                className="w-full h-full ml-1 p-4 overflow-auto"
+                className="w-full h-full overflow-auto overflow-y-auto"
                 animate={{
                     translateX: open ? 0 : 100,
                     scale: open ? 1 : 0.8,
@@ -122,7 +122,7 @@ const CodeWidget = () => {
                     <ShikiMagicMove
                         lang="ts"
                         theme="one-light"
-                        className="w-full h-full ml-1"
+                        className="w-full ml-4 p-2"
                         highlighter={highlighter}
                         code={code}
                         options={{
@@ -140,7 +140,7 @@ const CodeWidget = () => {
             >
                 <motion.div
                     drag="x"
-                    animate={{ translateX: open ? 10 : sheetWidth + 2 }}
+                    animate={{ translateX: open ? 10 : sheetWidth + 20 }}
                     {...DRAGGABLE_INDICATOR_ANIMATION_PROPS}
                     onPan={(e, { offset }) => {
                         if (offset.x > DRAG_BUFFER) {

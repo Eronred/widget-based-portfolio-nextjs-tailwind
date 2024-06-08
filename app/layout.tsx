@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: "Erencan Arica - Portfolio",
-  description: "",
+  title: "Erencan Arica - Frontend Developer",
 };
 
 export default function RootLayout({
@@ -24,6 +24,7 @@ export default function RootLayout({
           className="max-w-[1400px] flex items-center justify-center overflow-hidden "
         >
           {children}
+          <Analytics />
         </div>
       </body>
     </html>

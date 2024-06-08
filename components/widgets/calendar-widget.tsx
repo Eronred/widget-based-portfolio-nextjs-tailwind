@@ -22,6 +22,11 @@ const CalendarWidget: React.FC = () => {
                     <div className='text-2xl'>{formatWeekday()}</div>
                     <div className='text-7xl'>{formatDay()}</div>
                 </div>
+                <div className='flex flex-col text-lg text-gray-500 whitespace-nowrap'>
+                    <p>Opportunities</p>
+                    <p>Design Engineering</p>
+                    <p>Freelancing</p>
+                </div>
                 <div className='flex flex-row text-3xl whitespace-nowrap'>
                     Book a
                     <Link
