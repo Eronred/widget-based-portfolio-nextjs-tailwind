@@ -18,7 +18,7 @@ const APP_ANIMATION_PROPS = {
 };
 
 
-function AppItem({ url, logo: Logo }: AppItemProps) {
+function MacAppItem({ url, logo: Logo }: AppItemProps) {
     return (
         <motion.div
             {...APP_ANIMATION_PROPS}
@@ -37,4 +37,4 @@ function AppItem({ url, logo: Logo }: AppItemProps) {
     );
 }
 
-export default AppItem;
+export default MacAppItem;

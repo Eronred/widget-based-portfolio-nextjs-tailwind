@@ -3,7 +3,7 @@ import React from "react";
 export default function VSC() {
     return (
         <svg
-            className='shadow-md overflow-hidden rounded-xl'
+            className='overflow-hidden rounded-xl'
             width="70" height="70" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_17_549)">
                 <rect width="60" height="60" rx="14" fill="white" />

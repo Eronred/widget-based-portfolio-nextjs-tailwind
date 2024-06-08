@@ -3,7 +3,7 @@ import React from "react";
 export default function Excalidraw() {
     return (
         <svg
-            className='shadow-md overflow-hidden rounded-2xl'
+            className=' overflow-hidden rounded-2xl'
 
             width="70" height="70" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="60" height="60" rx="14" fill="#F9F9F9" />

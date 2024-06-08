@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import { motion, useAnimate, useMotionValue } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import { moveInAnimationVariant } from "@/lib/utils/animation";
-import { ShikiMagicMove } from "shiki-magic-move/react";
 import { type HighlighterCore, getHighlighter } from "shiki";
 import "shiki-magic-move/dist/style.css";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
@@ -10,6 +9,7 @@ import PressableIcon from "../pressable-icon";
 import { Check, Copy } from "lucide-react";
 import useMeasure from "react-use-measure";
 import { codeFiles } from "@/lib";
+import { ShikiMagicMove } from "shiki-magic-move/react";
 
 const TIMEOUT = 2000;
 const DRAG_BUFFER = 50;
@@ -67,16 +67,7 @@ const CodeWidget = () => {
 
     const [scope, animate] = useAnimate();
     const [open, setIsOpen] = useState(true);
-    const [sheetRef] = useMeasure();
-
-    const sheetWidthRef = useRef<HTMLElement>(null);
-    const [sheetWidth, setSheetWidth] = useState(0);
-
-    useEffect(() => {
-        if (sheetWidthRef.current) {
-            setSheetWidth(sheetWidthRef.current.offsetWidth);
-        }
-    }, [open]);
+    const [sheetRef, { width: sheetWidth }] = useMeasure();
 
     const handleClose = async () => {
         await animate("#sheet", {
@@ -163,10 +154,7 @@ const CodeWidget = () => {
 
                 <motion.div
                     id="sheet"
-                    ref={(el) => {
-                        sheetRef(el);
-                        sheetWidthRef.current = el;
-                    }}
+                    ref={sheetRef}
                     onClick={(e) => e.stopPropagation()}
                     variants={SHEET_VARIANT}
                     animate={open ? "open" : "closed"}

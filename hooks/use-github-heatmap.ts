@@ -7,15 +7,19 @@ type HeatmapData = { date: string; count: number; };
 const useGithubHeatmap = () => {
     const [data, setData] = useState<HeatmapData[]>([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<Error | null>(null); // Define the error state type
 
     const fetchGithubEvents = useCallback(async () => {
         setLoading(true);
         try {
             const response = await axios.get(`https://api.github.com/users/eronred/events`);
             return response.data;
-        } catch (err) {
-            setError(err);
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err);
+            } else {
+                setError(new Error('An unknown error occurred'));
+            }
         } finally {
             setLoading(false);
         }
@@ -25,7 +29,7 @@ const useGithubHeatmap = () => {
         const contributionTypes = ['PushEvent', 'CreateEvent', 'IssueCommentEvent', 'IssuesEvent'];
         const filteredEvents = events.filter(event => contributionTypes.includes(event.type));
 
-        const eventCountByDate = filteredEvents.reduce((acc, event) => {
+        const eventCountByDate = filteredEvents.reduce((acc: Record<string, number>, event: any) => { // Add typing for acc and event
             const eventDate = new Date(event.created_at).toISOString().split('T')[0];
             acc[eventDate] = (acc[eventDate] || 0) + 1;
             return acc;

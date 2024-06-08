@@ -1,12 +1,14 @@
-import VSC from '../components/vsc';
-import Figma from '../components/figma';
-import Notion from '../components/notion';
-import Ollama from '../components/ollama';
-import Obsidian from '../components/obsidian';
-import Excalidraw from '../components/excalidraw';
-import Rainbow from '../components/rainbow';
-import ArcBrowser from '../components/arc-browser';
-import HttPie from '../components/httpie';
+import VSC from '../components/applications/vsc';
+import Figma from '../components/applications/figma';
+import Notion from '../components/applications/notion';
+import Ollama from '../components/applications/ollama';
+import Obsidian from '../components/applications/obsidian';
+import Excalidraw from '../components/applications/excalidraw';
+import Rainbow from '../components/applications/rainbow';
+import ArcBrowser from '../components/applications/arc-browser';
+import HttPie from '../components/applications/httpie';
+import CameraApp from '../components/applications/camera';
+
 
 
 export interface Apps {
@@ -17,7 +19,7 @@ export interface Apps {
 }
 
 
-export const apps: Apps[] = [
+export const macApps: Apps[] = [
     {
         name: "Arc",
         url: "https://arc.dev",
@@ -73,6 +75,35 @@ export const apps: Apps[] = [
         url: "https://rainbow.me",
         LogoComponent: Rainbow,
         description: "Rainbow is a cryptocurrency wallet that is used to store, send, and receive Ethereum and Ethereum-based tokens.",
+    },
+];
+
+export const mobileApps: Apps[] = [
+
+   
+    {
+        name: "Arc",
+        url: "https://arc.dev",
+        LogoComponent: ArcBrowser,
+        description: "Arc is a privacy-focused browser that is built on top of the Chromium engine.",
+    },
+    {
+        name: "Obsidian",
+        url: "https://obsidian.md",
+        LogoComponent: Obsidian,
+        description: "Obsidian is a note-taking and knowledge management tool that is built on top of Markdown.",
+    },
+    {
+        name: "Rainbow",
+        url: "https://rainbow.me",
+        LogoComponent: Rainbow,
+        description: "Rainbow is a cryptocurrency wallet that is used to store, send, and receive Ethereum and Ethereum-based tokens.",
+    },
+    {
+        name: "Notion",
+        url: "https://notion.so",
+        LogoComponent: Notion,
+        description: "Notion is an all-in-one workspace for note-taking, project management, and task management.",
     },
 ];
 

@@ -2,7 +2,7 @@ import LargeGridCard from '../components/large-grid-card';
 import GithubHeatmap from './widgets/github-heatmap';
 import SmallGridCard from '../components/small-grid-card';
 import GithubRepoCard from './widgets/github-repo-widget';
-import AppItem from '../components/app-item';
+import MacAppItem from './mac-app-item';
 import CraftVideoCard from './widgets/craft-video-card';
 import LinearGradientGenerator from '../components/linear-gradient-generator';
 import AnimatedContentLink from "../components/animated-text";
@@ -22,7 +22,7 @@ export {
     GithubHeatmap,
     SmallGridCard,
     GithubRepoCard,
-    AppItem,
+    MacAppItem as AppItem,
     CraftVideoCard,
     LinearGradientGenerator,
     AnimatedContentLink,

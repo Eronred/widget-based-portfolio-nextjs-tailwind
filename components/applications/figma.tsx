@@ -3,7 +3,7 @@ import React from "react";
 export default function Figma() {
     return (
         <svg
-            className='shadow-md overflow-hidden rounded-xl'
+            className='overflow-hidden rounded-xl'
             width="70" height="70" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="60" height="60" rx="14" fill="#2A2828" />
             <path d="M23.1777 52C27.1319 52 30.3419 48.79 30.3419 44.8358V37.6716H23.1777C19.2235 37.6716 16.0135 40.8816 16.0135 44.8358C16.0135 48.79 19.2235 52 23.1777 52Z" fill="#0ACF83" />

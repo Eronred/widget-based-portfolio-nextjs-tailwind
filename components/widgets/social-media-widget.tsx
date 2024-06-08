@@ -6,25 +6,25 @@ import Link from 'next/link';
 const SOCIAL_MEDIA_LINKS = [
     {
         name: 'Github',
-        url: "https//github.com",
+        url: "https://github.com/eronred",
         icons: 'github.svg',
         bgColor: 'bg-github-brand'
     },
     {
         name: 'LinkedIn',
-        url: "https//linkedin.com",
+        url: "https://www.linkedin.com/in/eronred/",
         icons: 'linkedin.svg',
         bgColor: 'bg-linkedin-brand'
     },
     {
         name: 'Twitter',
-        url: "https//twitter.com",
+        url: "https://twitter.com/imeronn",
         icons: 'x.svg',
         bgColor: 'bg-twitter-brand'
     },
     {
         name: 'Layers',
-        url: "https//instagram.com",
+        url: "https://layers.to/erencan",
         icons: 'layers.svg',
         bgColor: 'bg-layers-brand'
     }

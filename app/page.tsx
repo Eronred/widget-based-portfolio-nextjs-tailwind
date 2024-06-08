@@ -6,7 +6,6 @@ import {
   LargeGridCard,
   GithubHeatmap,
   CraftVideoCard,
-  LinearGradientGenerator,
   SwipeCarouselWidget,
   TabCard,
   MobileSimulatorCard,
@@ -32,7 +31,7 @@ const Page: React.FC = () => {
       transition={{
         staggerChildren: 0.09
       }}
-      className="grid gird-cols-2 gap-4 sm:grid-flow-dense sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4 sm:p-8">
+      className="grid gird-cols-2 gap-6 sm:grid-flow-dense sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4 sm:p-8">
       <ProfileIntroduction />
       <SocialMediaWidget />
       <CalendarWidget />

@@ -6,7 +6,7 @@ export default function Ollama({
     return (
         <svg
             {...props}
-            className='shadow-md overflow-hidden rounded-xl'
+            className=' overflow-hidden rounded-xl'
             width="70" height="70" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="60" height="60" rx="14" fill="white" />
             <g clip-path="url(#clip0_17_673)">
