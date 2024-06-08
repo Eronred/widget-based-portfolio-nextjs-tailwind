@@ -18,9 +18,11 @@ const cameraApp = [
 const MobileSimulatorCard: React.FC = () => {
 
     const [time, setTime] = useState(new Date());
+
+    // TODO: Fix Camera opening functionality 
+
     const [streaming, setStreaming] = useState(false);
     const videoRef = useRef(null);
-
 
     const startCamera = async () => {
         try {
@@ -52,9 +54,6 @@ const MobileSimulatorCard: React.FC = () => {
             clearInterval(timer);
         };
     }, []);
-
-    // TODO: Fix Camera opening functionality 
-
 
     return (
         <motion.div
@@ -93,7 +92,6 @@ const MobileSimulatorCard: React.FC = () => {
                                     />
                                 ))}
                                 <div
-                                    onClick={startCamera}
                                 >
                                     <IOSAppItem
                                         logo={cameraApp[0].LogoComponent}

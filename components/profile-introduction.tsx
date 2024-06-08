@@ -14,7 +14,7 @@ const ProfileIntroduction = () => {
                     Hello, I’m
                     <AnimatedContentLink label="Erencan">
                         <img
-                            src="https://pbs.twimg.com/profile_images/1779911367056662530/oNPBfo_A_400x400.jpg"
+                            src="/avatar-me.jpg"
                             className="w-8 h-8 sm:w-12 sm:h-12 rounded-full ml-2"
                         />
                     </AnimatedContentLink>
