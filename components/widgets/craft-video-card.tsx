@@ -26,6 +26,7 @@ const CraftVideoCard: React.FC<CraftVideoCardProps> = ({
                     autoPlay
                     loop
                     muted
+                    onCanPlay={(event) => event.currentTarget.play()}
                 />
             </div>
         </motion.div>

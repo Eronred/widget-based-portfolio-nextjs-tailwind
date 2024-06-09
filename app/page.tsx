@@ -36,19 +36,22 @@ const Page: React.FC = () => {
       <CalendarWidget />
       <Web3WalletWidget />
       <NotesWidget
-        title="New Widgets"
+        title="Incoming Widgets"
         content={notes}
       />
       <SwipeCarouselWidget />
       <CodeWidget />
+      <CraftVideoCard
+        videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2Fr1ugYyx6sO7LkZ0B-Screen%2520Recording%25202024-03-12%2520at%25201.41.25%25E2%2580%25AFPM.mov"
+      />
       <QuoteWidget
         quote="The only way to do great work is to love what you do. If you haven' t found it yet, keep looking. Don't settle."
         author='Steve Jobs'
         image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiMjHAVVQo6BRB5QEqZLhAus79xn9XCLvzw&s'
       />
+      <GithubHeatmap />
       <MobileSimulatorCard />
       <MacDock />
-      <GithubHeatmap />
       <LargeGridCard
         title="Framer Motion"
         url='https://x.com/imeronn/status/1796874529190379949'
@@ -72,9 +75,7 @@ const Page: React.FC = () => {
       <CraftVideoCard
         videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2FvBsVm6jejw7G44s6-Screen%2520Recording%25202023-12-08%2520at%252003.17.58.mov"
       />
-      <CraftVideoCard
-        videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2Fr1ugYyx6sO7LkZ0B-Screen%2520Recording%25202024-03-12%2520at%25201.41.25%25E2%2580%25AFPM.mov"
-      />
+
       <CraftVideoCard
         videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2F3acNdbIyAiKQ9t1F-ssstwitter.com_1684246557937.mp4"
       />

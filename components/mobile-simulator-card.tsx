@@ -58,7 +58,7 @@ const MobileSimulatorCard: React.FC = () => {
     return (
         <motion.div
             variants={moveInAnimationVariant}
-            className='bg-gray-900 row-span-2 rounded-[40px]'>
+            className='bg-gray-900 row-span-2 min-h-[688px] rounded-[40px]'>
             <div className='w-full h-full p-3'>
                 <div className='w-full h-full flex items-center justify-center bg-iphone-pattern bg-cover rounded-[34px] relative' >
 

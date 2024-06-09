@@ -112,7 +112,7 @@ const CodeWidget = () => {
             className="aspect-ratio bg-small-grid-card rounded-3xl overflow-hidden relative"
         >
             <motion.div
-                className="w-full h-full overflow-auto overflow-y-auto"
+                className="w-full h-[405px]  sm:h-[310px] overflow-auto"
                 animate={{
                     translateX: open ? 0 : 100,
                     scale: open ? 1 : 0.8,
@@ -122,7 +122,7 @@ const CodeWidget = () => {
                     <ShikiMagicMove
                         lang="ts"
                         theme="one-light"
-                        className="w-full ml-4 p-2"
+                        className="w-full h-full ml-4 p-2 text-sm"
                         highlighter={highlighter}
                         code={code}
                         options={{

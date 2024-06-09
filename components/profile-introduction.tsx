@@ -1,9 +1,13 @@
 import React from "react";
 import AnimatedContentLink from "./animated-text";
+import { moveInAnimationVariant } from "@/lib/utils/animation";
+import { motion } from "framer-motion";
 
 const ProfileIntroduction = () => {
     return (
-        <div className="row-span-1 sm:col-span-2">
+        <motion.div
+            variants={moveInAnimationVariant}
+            className="row-span-1 sm:col-span-2">
             <div
                 className="text-2xl sm:text-3xl text-gray-900 text-left "
                 style={{
@@ -32,7 +36,7 @@ const ProfileIntroduction = () => {
                 </p>
                 <p>I am open to new roles and opportunities.</p>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

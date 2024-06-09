@@ -82,7 +82,7 @@ const Web3WalletWidget: React.FC = () => {
                         : 'bg-binance-brand'
             )}
         >
-            <div className=' w-full h-full flex flex-col items-center justify-center gap-2 p-8'>
+            <div className=' w-full h-full flex flex-col items-center justify-center gap-2 p-6'>
                 <div className='flex flex-row items-center justify-center gap-2'>
                     <motion.h2
                         variants={COPIED_VARIANT}
@@ -128,14 +128,14 @@ const Web3WalletWidget: React.FC = () => {
                                     }}
                                     transition={SPRING_OPTIONS}
                                     src={wallets.find(_ => _.id === selectedWallet)?.qr}
-                                    className={classNames(`max-w-[250px] max-h-[250px] sm:max-w-[200px] sm:max-h-[200px] object-cover overflow-hidden absolute`)}
+                                    className={classNames(`max-w-[210px] max-h-[210px] sm:max-w-[200px] sm:max-h-[200px] object-cover overflow-hidden absolute`)}
                                 />
                             ))
                         }
                     </div>
                 </div>
             </div>
-            <div className='absolute top-1/2 right-1 transform -translate-y-1/2 flex flex-col items-center'>
+            <div className='absolute top-1/2 right-1 transform -translate-y-1/2 z-50 flex flex-col items-center'>
                 {
                     wallets.map((_, index) => (
                         <motion.img
@@ -145,9 +145,7 @@ const Web3WalletWidget: React.FC = () => {
                             onClick={() => setSelectedWallet(_.id)}
                             src={_.logo}
                             className={classNames(`w-10 h-10 rounded-full cursor-pointer overflow-hidden border-2`,
-
                                 selectedWallet === _.id ? 'border-gray-100' : 'border-transparent')
-
                             }
                             alt={_.name}
                         />

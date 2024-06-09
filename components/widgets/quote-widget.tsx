@@ -19,7 +19,7 @@ const QuoteWidget: React.FC<Props> = (
             variants={moveInAnimationVariant}
             className={`aspect-square bg-gradient-to-t from-gray-50 to-gray-100 rounded-3xl overflow-hidden`}
         >
-            <div className='w-full h-full flex flex-col items-center justify-center p-4 sm:p-8'>
+            <div className='w-full h-full flex flex-col items-center justify-center p-4 sm:p-6'>
                 <div className=" w-full h-full flex items-center justify-center">
                     <p className='text-2xl text-center'>
                         {quote}
