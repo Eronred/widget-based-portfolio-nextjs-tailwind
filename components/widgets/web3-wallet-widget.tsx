@@ -53,18 +53,18 @@ const Web3WalletWidget: React.FC = () => {
         {
             id: 'rainbow',
             name: 'Raindow',
-            logo: 'https://www.rainbowkit.com/rainbow.svg',
+            logo: './icons/rainbow.svg',
             qr: './wallets/rainbow.png'
         },
         {
             id: 'binance',
             name: 'Binance',
-            logo: 'https://public.bnbstatic.com/20190405/eb2349c3-b2f8-4a93-a286-8f86a62ea9d8.png',
+            logo: './icons/binance.svg',
             qr: './wallets/binance.png'
         },
     ]
 
-    const [selectedWallet, setSelectedWallet] = React.useState<string>("uniswap");
+    const [selectedWallet, setSelectedWallet] = React.useState<string>("rainbow");
     const isSelectedWalletBinance = selectedWallet === 'binance';
     const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 1000 })
 
@@ -110,11 +110,11 @@ const Web3WalletWidget: React.FC = () => {
                     </PressableIcon>
                 </div>
                 <div
-                    className='w-full h-full flex items-center justify-center gap-2 '
+                    className='w-full h-full flex items-center justify-center'
                 >
                     <div className="flex flex-row items-center justify-center relative">
                         {
-                            wallets.map((_, index) => (
+                            wallets.map((_) => (
                                 <motion.img
                                     key={_.id}
                                     animate={selectedWallet === _.id ? {
@@ -135,7 +135,7 @@ const Web3WalletWidget: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute top-1/2  right-2 transform -translate-y-1/2 flex flex-col items-center gap-2'>
+            <div className='absolute top-1/2 right-1 transform -translate-y-1/2 flex flex-col items-center'>
                 {
                     wallets.map((_, index) => (
                         <motion.img

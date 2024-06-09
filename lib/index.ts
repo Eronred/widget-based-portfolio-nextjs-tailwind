@@ -22,7 +22,7 @@ export interface Apps {
 export const macApps: Apps[] = [
     {
         name: "Arc",
-        url: "https://arc.dev",
+        url: "https://arc.net/",
         LogoComponent: ArcBrowser,
         description: "Arc is a privacy-focused browser that is built on top of the Chromium engine.",
     },
@@ -80,10 +80,10 @@ export const macApps: Apps[] = [
 
 export const mobileApps: Apps[] = [
 
-   
+
     {
         name: "Arc",
-        url: "https://arc.dev",
+        url: "https://arc.net/",
         LogoComponent: ArcBrowser,
         description: "Arc is a privacy-focused browser that is built on top of the Chromium engine.",
     },

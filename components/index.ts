@@ -16,6 +16,7 @@ import CalendarWidget from '../components/widgets/calendar-widget';
 import CodeWidget from '../components/widgets/code-widget';
 import ProfileIntroduction from './profile-introduction';
 import NotesWidget from '../components/widgets/notes-widget';
+import SocialMediaWidget from '../components/widgets/social-media-widget';
 
 export {
     LargeGridCard,
@@ -35,5 +36,6 @@ export {
     CalendarWidget,
     CodeWidget,
     ProfileIntroduction,
-    NotesWidget
+    NotesWidget,
+    SocialMediaWidget
 }
