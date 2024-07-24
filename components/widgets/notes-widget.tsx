@@ -1,3 +1,4 @@
+"use client"
 import { motion, color } from 'framer-motion'
 import React from 'react'
 import { moveInAnimationVariant } from "@/lib/utils/animation";
@@ -6,7 +7,6 @@ interface Content {
     title: string;
     content?: string;
 }
-
 
 interface NotesWidgetProps {
     title: string;

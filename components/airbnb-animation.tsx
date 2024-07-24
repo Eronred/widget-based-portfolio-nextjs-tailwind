@@ -48,7 +48,7 @@ const AirbnbImageAnimation = () => {
 
     return (
         <motion.div
-            className='flex flex-row items-center justify-center w-full h-full shadow-lg rounded-xl overflow-hidden p-4 relative'
+            className='flex flex-row items-center justify-center w-full h-full rounded-xl overflow-hidden p-4 relative'
         >
             {
                 images.map((_, index) => (
@@ -59,7 +59,7 @@ const AirbnbImageAnimation = () => {
                         initial={IMAGE_ANIMATION_VARIANTS.initial()}
                         animate={IMAGE_ANIMATION_VARIANTS.animate(index)}
                         transition={IMAGE_ANIMATION_VARIANTS.transition(index)}
-                        className='w-12 h-12 border-2 border-gray-100 rounded-lg -m-3 shadow-lg'
+                        className='w-16 h-16 border-2 border-gray-100 rounded-2xl -m-3 shadow-lg'
                     />
                 ))
             }

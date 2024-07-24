@@ -32,7 +32,6 @@ const config: Config = {
         "calendar-card": "radial-gradient(220.03% 220.03% at 173.43% -46.86%, #5C5C5C 0%, #000 100%)",
         "macbook-pattern": "url('/bg-mac.png')",
         "iphone-pattern": "url('/bg-iphone.png')",
-
       },
 
     },
