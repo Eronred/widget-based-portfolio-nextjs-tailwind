@@ -16,23 +16,33 @@ const ProfileIntroduction = () => {
             >
                 <p className="mb-4">
                     Hello, I’m
-                    <AnimatedContentLink label="Erencan">
+                    <AnimatedContentLink
+                        label="Erencan"
+                        url="https://x.com/imeronn"
+                    >
                         <img
                             src="/avatar-me.jpg"
-                            className="w-8 h-8 sm:w-12 sm:h-12 rounded-full ml-2"
+                            className="size-8 sm:size-10  rounded-full ml-2"
                         />
                     </AnimatedContentLink>
-                    . I am a frontend developer with design experience.
+                    . I am a Design Engineer.
                 </p>
                 <p className="mb-4">
                     I’m currently building
                     <AnimatedContentLink label="Nice Prompt" url="https://niceprompt.app">
                         <img
-                            src="./nice-prompt.svg"
-                            className=" w-4 h-4 sm:w-12 sm:h-12 ml-2"
+                            src="./np-logo-dark.svg"
+
+                            className=" size-4 sm:size-10 ml-2 fill-black"
                         />
                     </AnimatedContentLink>
-                    with Next.js and React Native.
+                    where you can save, organize and share your prompts. Available on
+                    <AnimatedContentLink label="VSCode & Cursor" url="https://niceprompt.app">
+                        <img
+                            src="./vsc-logo.svg"
+                            className=" size-4 sm:size-10  ml-2 fill-black"
+                        />
+                    </AnimatedContentLink>
                 </p>
                 <p>I am open to new roles and opportunities.</p>
             </div>

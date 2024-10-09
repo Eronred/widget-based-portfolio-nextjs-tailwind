@@ -109,7 +109,7 @@ const CodeWidget = () => {
     return (
         <motion.div
             variants={moveInAnimationVariant}
-            className="aspect-ratio max-w-[320px]  bg-small-grid-card rounded-3xl overflow-hidden relative"
+            className="aspect-ratio   bg-small-grid-card rounded-3xl overflow-hidden relative"
         >
             <motion.div
                 className="w-full h-[405px]  sm:h-[310px] overflow-auto"
