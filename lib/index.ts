@@ -113,15 +113,14 @@ export const notes = [
         title: "Ollama Terminal",
     },
     {
+        title:"Nice Prompt Widget"
+    },
+    {
         title: "SQL Table Generator",
         content: "Talk and get a table generated for you"
     },
     {
         title: "Code Snippets",
-    },
-    {
-        title: "Crypto Tracker",
-        content: "Track your favorite cryptocurrencies"
     },
 ]
 

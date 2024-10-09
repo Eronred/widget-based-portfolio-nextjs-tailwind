@@ -20,6 +20,8 @@ import {
 } from "../components";
 import { notes } from "@/lib";
 import CDPlayer from "@/components/widgets/cd-player";
+import CoolTimer from "@/components/widgets/cool-timer";
+import FTWidget from "@/components/widgets/ft-widget";
 
 const Page: React.FC = () => {
   return (
@@ -35,9 +37,11 @@ const Page: React.FC = () => {
       <SocialMediaWidget />
       <CalendarWidget />
       <Web3WalletWidget />
-      <NotesWidget title="Incoming Widgets" content={notes} />
+      <CoolTimer />
       <CDPlayer />
+      <FTWidget />
       <SwipeCarouselWidget />
+      <NotesWidget title="Incoming Widgets" content={notes} />
       <CodeWidget />
       <LargeGridCard
         title="Framer Motion"
@@ -53,7 +57,7 @@ const Page: React.FC = () => {
       <LargeGridCard title="Handy Arrows" url="https://handyarrows.com">
         <div className="w-full h-full mt-6 hover:translate-y-[-3px] hover:scale-95 transition-all active:scale-90 bg-orange-300 rounded-xl shadow-lg">
           <img
-            src="https://private-user-images.githubusercontent.com/43992376/348393336-e55eaf98-0911-4111-96db-76718f6d9970.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4NTg5NzgsIm5iZiI6MTcyMTg1ODY3OCwicGF0aCI6Ii80Mzk5MjM3Ni8zNDgzOTMzMzYtZTU1ZWFmOTgtMDkxMS00MTExLTk2ZGItNzY3MThmNmQ5OTcwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI0VDIyMDQzOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIyZjEwMjdjZDhlYmYzNDA1ZGJkMGMyYzUxYzEzNjQ3NWI2YzljZTAzZTBkY2M2ZjI0ZDI2NzYzNzg0MTMzNDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.fcMuQg7zzbircVSJfCnZAnT47GQB2zo7P1iqLuzb8Hw"
+            src="/handy-arrows-cover.png"
             className="w-full h-full object-cover rounded-t-xl"
           />
         </div>

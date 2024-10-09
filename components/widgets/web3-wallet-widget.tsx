@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import classNames from 'classnames';
 import { Copy, Check } from 'lucide-react';
 import PressableIcon from '../pressable-icon';
@@ -8,7 +8,7 @@ import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 import { web3walletAddress } from '@/lib/utils/constants'; web3walletAddress
 
 interface Wallet {
-    id: string;
+    id: number;
     name: string;
     logo: string;
     qr: string;
@@ -45,28 +45,47 @@ const COPIED_VARIANT = {
 const Web3WalletWidget: React.FC = () => {
     const wallets: Wallet[] = [
         {
-            id: 'uniswap',
+            id: 1,
             name: 'Uniswap',
             logo: 'https://app.uniswap.org/favicon.png',
             qr: './wallets/uniswap.png'
         },
         {
-            id: 'rainbow',
+            id: 2,
             name: 'Raindow',
             logo: './icons/rainbow.svg',
             qr: './wallets/rainbow.png'
         },
         {
-            id: 'binance',
+            id: 3,
             name: 'Binance',
             logo: './icons/binance.svg',
             qr: './wallets/binance.png'
         },
     ]
 
-    const [selectedWallet, setSelectedWallet] = React.useState<string>("rainbow");
-    const isSelectedWalletBinance = selectedWallet === 'binance';
+    const [selectedWallet, setSelectedWallet] = useState<number>(wallets[0].id);
+    const [isUserInteracted, setIsUserInteracted] = useState<boolean>(false)
+    const isSelectedWalletBinance = selectedWallet === 3;
     const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 1000 })
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!isUserInteracted) {
+                setSelectedWallet((prevSelected) => {
+                    const nextIndex = wallets.findIndex((ft) => ft.id === prevSelected) + 1;
+                    return nextIndex >= wallets.length ? wallets[0].id : wallets[nextIndex].id;
+                });
+            }
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, [isUserInteracted]);
+
+    const handleWalletSelection = (id: number) => {
+        setSelectedWallet(id)
+        setIsUserInteracted(true)
+    }
 
 
     const handleCopy = () => {
@@ -77,8 +96,8 @@ const Web3WalletWidget: React.FC = () => {
         <motion.div
             variants={moveInAnimationVariant}
             className={classNames(` aspect-square rounded-3xl relative`,
-                selectedWallet === 'rainbow' ? 'bg-rainbow-brand'
-                    : selectedWallet === 'uniswap' ? 'bg-uniswap-brand'
+                selectedWallet === 1 ? 'bg-rainbow-brand'
+                    : selectedWallet === 2 ? 'bg-uniswap-brand'
                         : 'bg-binance-brand'
             )}
         >
@@ -142,7 +161,7 @@ const Web3WalletWidget: React.FC = () => {
                             key={index}
                             variants={WALLET_SELECTION_VARIANTS}
                             animate={selectedWallet === _.id ? 'isSelected' : 'select'}
-                            onClick={() => setSelectedWallet(_.id)}
+                            onClick={() => handleWalletSelection(_.id)}
                             src={_.logo}
                             className={classNames(`w-10 h-10 rounded-full cursor-pointer overflow-hidden border-2`,
                                 selectedWallet === _.id ? 'border-gray-100' : 'border-transparent')

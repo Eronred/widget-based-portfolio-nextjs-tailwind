@@ -46,7 +46,7 @@ export default function MusicPlayer() {
   const updateRotation = useCallback(() => {
     if (isPlaying) {
       const now = performance.now();
-      const deltaTime = (now - lastTimeRef.current) / 1000; // Convert to seconds
+      const deltaTime = (now - lastTimeRef.current) / 1000; 
       rotationRef.current =
         (rotationRef.current + ROTATION_SPEED * deltaTime) % 360;
       lastTimeRef.current = now;
