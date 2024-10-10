@@ -1,6 +1,7 @@
 "use client"
-import { motion, useCycle } from 'framer-motion'
-import React from 'react'
+import { motion, useAnimation, AnimationControls } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+import { moveInAnimationVariant } from "@/lib/utils/animation";
 
 const images = [
     {
@@ -28,43 +29,78 @@ const images = [
 const ROTATION_DEGREES = [10, -20, -5, 5, -2];
 
 const IMAGE_ANIMATION_VARIANTS = {
-    initial: () => ({
-        scale: 0,
-    }),
-    animate: (i: number) => ({
+    hidden: { scale: 0, rotate: 0 },
+    visible: (i: number) => ({
         scale: 1,
-        rotate: ROTATION_DEGREES[i]
+        rotate: ROTATION_DEGREES[i],
+        transition: {
+            delay: i * 0.1,
+            duration: 0.5,
+            type: 'spring',
+            stiffness: 360,
+            damping: 20
+        }
     }),
-    transition: (i: number) => ({
-        delay: i * 0.1,
-        duration: 0.5,
-        type: 'spring',
-        stiffness: 360,
-        damping: 20
+    exit: (i: number) => ({
+        scale: 0,
+        rotate: 0,
+        transition: {
+            delay: (4 - i) * 0.1,
+            duration: 0.3,
+            type: 'spring',
+        }
     })
+};
+
+function useAnimationCycle(controls: AnimationControls, interval: number = 2000) {
+    const [isAnimating, setIsAnimating] = useState<boolean>(true);
+
+    const startAnimation = async () => {
+        setIsAnimating(true);
+        await controls.start("visible");
+        await new Promise(resolve => setTimeout(resolve, interval));
+        await controls.start("exit");
+        setIsAnimating(false);
+    };
+
+    useEffect(() => {
+        if (!isAnimating) {
+            startAnimation();
+        }
+    }, [isAnimating]);
+
+    useEffect(() => {
+        startAnimation();
+    }, []);
+
+    return { startAnimation };
 }
 
 const AirbnbImageAnimation = () => {
+    const controls = useAnimation();
+    const { startAnimation } = useAnimationCycle(controls);
 
     return (
         <motion.div
-            className='flex flex-row items-center justify-center w-full h-full rounded-xl overflow-hidden p-4 relative'
+            variants={moveInAnimationVariant}
+            className="aspect-square rounded-3xl border-2 border-gray-100 overflow-hidden flex flex-col items-center justify-center bg-gradient-to-t from-white/10 to-white/10"
         >
-            {
-                images.map((_, index) => (
+            <motion.div className="flex flex-row items-center justify-center w-full h-full rounded-xl overflow-hidden p-4 relative">
+                {images.map((image, index) => (
                     <motion.img
-                        src={_.src}
-                        alt={_.alt}
+                        src={image.src}
+                        alt={image.alt}
                         key={index}
-                        initial={IMAGE_ANIMATION_VARIANTS.initial()}
-                        animate={IMAGE_ANIMATION_VARIANTS.animate(index)}
-                        transition={IMAGE_ANIMATION_VARIANTS.transition(index)}
-                        className='w-16 h-16 border-2 border-gray-100 rounded-2xl -m-3 shadow-lg'
+                        custom={index}
+                        variants={IMAGE_ANIMATION_VARIANTS}
+                        initial="hidden"
+                        animate={controls}
+                        className="w-16 h-16 border-2 border-gray-100 rounded-2xl -m-3 shadow-lg"
                     />
-                ))
-            }
+                ))}
+            </motion.div>
         </motion.div>
-    )
-}
+    );
+};
 
 export default AirbnbImageAnimation

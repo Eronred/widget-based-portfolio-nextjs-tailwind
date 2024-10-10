@@ -25,7 +25,7 @@ const ProfileIntroduction = () => {
                             className="size-8 sm:size-10  rounded-full ml-2"
                         />
                     </AnimatedContentLink>
-                    . I am a Design Engineer.
+                     I am a Design Engineer.
                 </p>
                 <p className="mb-4">
                     I’m currently building

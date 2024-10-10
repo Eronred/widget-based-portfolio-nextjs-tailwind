@@ -35,7 +35,7 @@ const FTWidget: React.FC = () => {
     }, [isUserInteracted]);
 
     const handleArrowUp = (selectedId: number) => {
-        setIsUserInteracted(true); 
+        setIsUserInteracted(true);
         setIsArrowUp(selected > selectedId);
         setSelected(selectedId);
     };
@@ -44,7 +44,7 @@ const FTWidget: React.FC = () => {
         <motion.div
             variants={moveInAnimationVariant}
             className={` bg-black aspect-square rounded-3xl overflow-hidden flex flex-col items-center justify-center `}>
-            <div className="w-32 h-32 bg-gradient-to-b from-[#f23d0111] to-red-600/15 rounded-full flex flex-col items-center justify-center gap-2 border-2 border-[#f23d010a]">
+            <div className="w-32 h-32 scale-125 bg-gradient-to-b from-[#f23d0111] to-red-600/15 rounded-full flex flex-col items-center justify-center gap-2 border-2 border-[#f23d010a]">
                 {/* Arrow and Title */}
                 <div className="flex items-center justify-center -mb-1">
                     <motion.div

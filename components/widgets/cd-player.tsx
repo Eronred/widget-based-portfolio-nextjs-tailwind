@@ -88,7 +88,7 @@ export default function MusicPlayer() {
   return (
     <motion.div
       variants={moveInAnimationVariant}
-      className={`aspect-square bg-gradient-to-tr from-gray-100 to-green-300 rounded-3xl p-2 `}
+      className={`aspect-square bg-gradient-to-tr from-gray-100 to-green-300 rounded-[32px] p-2 `}
     >
       <div className="size-full relative perspective-1000">
         <audio
@@ -96,7 +96,7 @@ export default function MusicPlayer() {
           src="./songs/the-shire.mp3"
           preload="auto"
         ></audio>
-        <div className="w-full h-full grid aspect-video rounded-[32px] bg-white/10 relative">
+        <div className="w-full h-full grid aspect-video rounded-[24px] bg-white/10 relative">
           <CaseContainer rotate={rotate} dragHandlers={dragHandlers}>
             <CaseSpine />
             <BackContent />
@@ -123,7 +123,7 @@ const CaseContainer = ({ rotate, dragHandlers, children }) => (
     }}
     {...dragHandlers}
     whileTap={{ cursor: "grabbing" }}
-    className="w-full h-full z-50 bg-white/40 rounded-[32px] border-[6px] cursor-grab border-white/60 backdrop-blur-lg overflow-hidden flex shadow-lg"
+    className="w-full h-full z-50 bg-white/40 rounded-[24px] border-[6px] cursor-grab border-white/60 backdrop-blur-lg overflow-hidden flex shadow-lg"
   >
     {children}
   </motion.div>
@@ -154,7 +154,7 @@ const BackContent = () => (
 
 const CDContainer = ({ children }) => (
   <div className="absolute inset-0 w-full h-full flex items-center  justify-center">
-    <div className="absolute inset-0 w-full h-full rounded-[40px] border-2 border-white/60 backdrop-blur-sm"></div>
+    <div className="absolute inset-0 w-full h-full rounded-[24px] border-2 border-white/60 backdrop-blur-sm"></div>
     <div className="absolute top-1 -mt-[8px] z-0 flex items-center justify-around w-full h-6 space-x-8">
       <div className="flex items-center justify-center gap-2 mr-8">
         {/* <div className="w-1 h-3 rounded-b-full border-b-2 border-white/30 bg-white/20 backdrop-blur-sm"></div> */}

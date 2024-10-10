@@ -34,7 +34,7 @@ export default function ProductLaunchWidget() {
     return (
         <motion.div
             variants={moveInAnimationVariant}
-            className="aspect-square bg-gradient-to-br from-gray-900 to-gray-900 rounded-3xl overflow-hidden relative p-4 flex flex-col justify-between"
+            className="aspect-square bg-black/90 rounded-3xl overflow-hidden relative p-4 flex flex-col justify-between"
         >
             <div
                 className=" bg-black/70 p-3 absolute top-14 right-0 left-0  flex flex-col items-start justify-start gap-2 h-full scale-90 rounded-2xl">
@@ -46,11 +46,18 @@ export default function ProductLaunchWidget() {
                             scale: 1,
                         }}
                         animate={{
-                            scale: isHovered === feature.id ? 1.2 : 1,
+                            scale: isHovered === feature.id ? 1.1 : 1,
                             opacity: isHovered === feature.id ? 1 : 0.5,
                         }}
                         transition={{
                             duration: 0.3,
+                            type: 'spring',
+                            stiffness: 200,
+                            damping: 10,
+                        }}
+                        exit={{
+                            scale: 1,
+                            opacity: 0.5,
                         }}
                     >
                         <motion.svg
