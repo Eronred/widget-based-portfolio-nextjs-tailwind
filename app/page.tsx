@@ -24,7 +24,7 @@ import CoolTimer from "@/components/widgets/cool-timer";
 import FTWidget from "@/components/widgets/ft-widget";
 import ProductLaunchWidget from "@/components/widgets/product-launch-widget";
 import AirbnbImageAnimation from "@/components/airbnb-animation";
-import CuteCalendar from "@/components/widgets/cute-calendar";
+import AvatarsWidget from "@/components/widgets/avatars-widget";
 
 const Page: React.FC = () => {
   return (
@@ -39,10 +39,10 @@ const Page: React.FC = () => {
       <ProfileIntroduction />
       {/* <SocialMediaWidget /> */}
       <CalendarWidget />
-      <CuteCalendar />
       <Web3WalletWidget />
       <CDPlayer />
       <CoolTimer />
+      <AvatarsWidget />
       <FTWidget />
       <AirbnbImageAnimation />
       <ProductLaunchWidget />

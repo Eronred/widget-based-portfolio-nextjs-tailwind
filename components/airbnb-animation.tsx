@@ -2,6 +2,8 @@
 import { motion, useAnimation, AnimationControls } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { moveInAnimationVariant } from "@/lib/utils/animation";
+import useAnimationCycle from '@/hooks/use-animation-circle';
+
 
 const images = [
     {
@@ -51,30 +53,6 @@ const IMAGE_ANIMATION_VARIANTS = {
         }
     })
 };
-
-function useAnimationCycle(controls: AnimationControls, interval: number = 2000) {
-    const [isAnimating, setIsAnimating] = useState<boolean>(true);
-
-    const startAnimation = async () => {
-        setIsAnimating(true);
-        await controls.start("visible");
-        await new Promise(resolve => setTimeout(resolve, interval));
-        await controls.start("exit");
-        setIsAnimating(false);
-    };
-
-    useEffect(() => {
-        if (!isAnimating) {
-            startAnimation();
-        }
-    }, [isAnimating]);
-
-    useEffect(() => {
-        startAnimation();
-    }, []);
-
-    return { startAnimation };
-}
 
 const AirbnbImageAnimation = () => {
     const controls = useAnimation();
