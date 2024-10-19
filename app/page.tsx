@@ -24,6 +24,7 @@ import CoolTimer from "@/components/widgets/cool-timer";
 import FTWidget from "@/components/widgets/ft-widget";
 import ProductLaunchWidget from "@/components/widgets/product-launch-widget";
 import AirbnbImageAnimation from "@/components/airbnb-animation";
+import CuteCalendar from "@/components/widgets/cute-calendar";
 
 const Page: React.FC = () => {
   return (
@@ -36,8 +37,9 @@ const Page: React.FC = () => {
       className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4 sm:p-8"
     >
       <ProfileIntroduction />
-      <SocialMediaWidget />
+      {/* <SocialMediaWidget /> */}
       <CalendarWidget />
+      <CuteCalendar />
       <Web3WalletWidget />
       <CDPlayer />
       <CoolTimer />

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { moveInAnimationVariant } from '@/lib/utils/animation';
 import Link from 'next/link';
 
-const SOCIAL_MEDIA_LINKS = [
+export const SOCIAL_MEDIA_LINKS = [
     {
         name: 'Github',
         url: "https://github.com/eronred",
@@ -22,12 +22,12 @@ const SOCIAL_MEDIA_LINKS = [
         icons: 'x.svg',
         bgColor: 'bg-twitter-brand'
     },
-    {
-        name: 'Layers',
-        url: "https://layers.to/erencan",
-        icons: 'layers.svg',
-        bgColor: 'bg-layers-brand'
-    }
+    // {
+    //     name: 'Layers',
+    //     url: "https://layers.to/erencan",
+    //     icons: 'layers.svg',
+    //     bgColor: 'bg-layers-brand'
+    // }
 ]
 
 const SocialMediaWidget = () => {
