@@ -55,7 +55,6 @@ const Page: React.FC = () => {
         author="Steve Jobs"
         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiMjHAVVQo6BRB5QEqZLhAus79xn9XCLvzw&s"
       />
-      <CraftVideoCard videoFile="https://storage.googleapis.com/creatorspace-public/users%2Fclefxtbvk01ljqq0y524p94vf%2F3acNdbIyAiKQ9t1F-ssstwitter.com_1684246557937.mp4" />
       <LargeGridCard
         title="Framer Motion"
         url="https://x.com/imeronn/status/1796874529190379949"

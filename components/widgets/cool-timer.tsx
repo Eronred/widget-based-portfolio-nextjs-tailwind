@@ -62,7 +62,7 @@ const CoolTimer: React.FC = () => {
                         }}
                         animate={{
                             backgroundColor: index < time ? "#9b7a5c" : "#524131",
-                            scale: index < time ? 1 : 0.1,
+                            scale: index < time ? 1 : 0,
                         }}
                         transition={{
                             duration: 0.5,

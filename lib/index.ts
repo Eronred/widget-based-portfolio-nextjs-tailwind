@@ -111,16 +111,20 @@ export const mobileApps: Apps[] = [
 export const notes = [
     {
         title: "Ollama Terminal",
+        isDone: false
     },
     {
-        title:"Nice Prompt Widget"
+        title: "Nice Prompt Widget",
+        isDone: true
     },
     {
         title: "SQL Table Generator",
-        content: "Talk and get a table generated for you"
+        content: "Talk and get a table generated for you",
+        isDone: false
     },
     {
         title: "Code Snippets",
+        isDone: true
     },
 ]
 

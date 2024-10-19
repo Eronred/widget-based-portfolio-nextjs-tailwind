@@ -57,7 +57,7 @@ export default function AvatarsWidget() {
     return (
         <motion.div
             variants={moveInAnimationVariant}
-            className='aspect-square bg-calendar-card flex flex-col items-center justify-start gap-2 rounded-3xl overflow-hidden relative bg-gradient-to-t from-gray-800 via-gray-900 to-zinc-900'>
+            className='aspect-square bg-calendar-card flex flex-col items-center justify-start gap-2 rounded-3xl overflow-hidden relative bg-gradient-to-t from-black/90 to-black'>
             <div className='w-full flex items-center justify-center text-xl  text-white mt-4'>Who's Watching?</div>
             <AnimatePresence>
                 <motion.div
@@ -70,13 +70,13 @@ export default function AvatarsWidget() {
                                 initial="hidden"
                                 animate={controls}
                                 key={index}
-                                className='flex flex-col flex-wrap items-center justify-center gap-2'>
+                                className='flex flex-col flex-wrap items-center justify-center gap-2 '>
                                 <Image
                                     src={profile.image}
                                     alt={profile.name}
                                     width={72}
                                     height={72}
-                                    className='rounded-md'
+                                    className='rounded-md shadow-xl'
                                 />
                                 <p className='text-sm text-center text-white'>{profile.name}</p>
                             </motion.div>

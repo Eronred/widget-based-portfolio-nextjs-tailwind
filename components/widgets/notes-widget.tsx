@@ -11,6 +11,7 @@ interface Content {
 interface NotesWidgetProps {
     title: string;
     content: Content[];
+    isDone?: boolean;
 }
 
 const HEATMAP_ANIMATION_VARIANTS = {
@@ -29,7 +30,7 @@ const SPRING_OPTIONS = {
     damping: 20,
 };
 
-const NotesWidget: React.FC<NotesWidgetProps> = ({ title = "Notes", content }) => {
+const NotesWidget: React.FC<NotesWidgetProps> = ({ title = "Notes", content, isDone = false }) => {
     return (
         <motion.div
             variants={moveInAnimationVariant}
@@ -61,9 +62,9 @@ const NotesWidget: React.FC<NotesWidgetProps> = ({ title = "Notes", content }) =
                                     SPRING_OPTIONS
                                 }
                                 key={index}
-                                className={`w-full flex flex-col items-start pb-1 ${index < content.length - 1 ? 'border-b border-gray-300' : ''}`}>
-                                <h1 className='text-md font-semibold'>{item.title}</h1>
-                                <p className='w-full text-sm overflow-wrap break-word '>{item.content}</p>
+                                className={`w-full flex flex-col items-start pb-1 ${index < content.length - 1 ? 'border-b border-gray-200' : ''}`}>
+                                <h1 className={`text-md  ${item.isDone ? 'line-through text-gray-500' : ''}`}>{item.title}</h1>
+                                <p className={`w-full text-sm overflow-wrap break-word ${item.isDone ? 'line-through text-gray-500' : ''}`}>{item.content}</p>
                             </motion.div>
                         ))
                     }
