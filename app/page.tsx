@@ -25,7 +25,7 @@ import FTWidget from "@/components/widgets/ft-widget";
 import ProductLaunchWidget from "@/components/widgets/product-launch-widget";
 import AirbnbImageAnimation from "@/components/airbnb-animation";
 import AvatarsWidget from "@/components/widgets/avatars-widget";
-
+import MilestoneWidget from "@/components/widgets/milestone-widget";
 const Page: React.FC = () => {
   return (
     <motion.div
@@ -45,6 +45,7 @@ const Page: React.FC = () => {
       <AvatarsWidget />
       <FTWidget />
       <AirbnbImageAnimation />
+      <MilestoneWidget />
       <ProductLaunchWidget />
       <NotesWidget title="Incoming Widgets" content={notes} />
       <SwipeCarouselWidget />
