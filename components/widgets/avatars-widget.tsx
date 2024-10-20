@@ -57,7 +57,7 @@ export default function AvatarsWidget() {
     return (
         <motion.div
             variants={moveInAnimationVariant}
-            className='aspect-square bg-calendar-card flex flex-col items-center justify-start gap-2 rounded-3xl overflow-hidden relative bg-gradient-to-t from-black/90 to-black'>
+            className='aspect-square flex flex-col items-center justify-start gap-2 rounded-3xl overflow-hidden relative bg-gradient-to-t from-black/90 to-black'>
             <div className='w-full flex items-center justify-center text-xl  text-white mt-4'>Who's Watching?</div>
             <AnimatePresence>
                 <motion.div

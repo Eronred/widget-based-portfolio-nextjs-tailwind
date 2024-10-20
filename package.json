@@ -24,7 +24,8 @@
     "react-dom": "^18",
     "react-use-measure": "^2.1.1",
     "shiki-magic-move": "^0.4.2",
-    "sonner": "^1.4.41"
+    "sonner": "^1.4.41",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",
