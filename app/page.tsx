@@ -8,7 +8,6 @@ import {
   CraftVideoCard,
   SwipeCarouselWidget,
   TabCard,
-  MobileSimulatorCard,
   QuoteWidget,
   Web3WalletWidget,
   MacDock,
@@ -24,7 +23,8 @@ import CoolTimer from "@/components/widgets/cool-timer";
 import FTWidget from "@/components/widgets/ft-widget";
 import ProductLaunchWidget from "@/components/widgets/product-launch-widget";
 import AirbnbImageAnimation from "@/components/airbnb-animation";
-import AvatarsWidget from "@/components/widgets/avatars-widget";
+import AvatarWidget from "@/components/widgets/avatar-widget";
+import NetflixWidget from "@/components/widgets/netflix-widget";
 import MilestoneWidget from "@/components/widgets/milestone-widget";
 const Page: React.FC = () => {
   return (
@@ -42,7 +42,8 @@ const Page: React.FC = () => {
       <Web3WalletWidget />
       <CDPlayer />
       <CoolTimer />
-      <AvatarsWidget />
+      <AvatarWidget />
+      <NetflixWidget />
       <FTWidget />
       <AirbnbImageAnimation />
       <MilestoneWidget />

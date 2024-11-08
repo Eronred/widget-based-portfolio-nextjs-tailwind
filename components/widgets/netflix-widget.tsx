@@ -34,7 +34,7 @@ const animationVariant = {
 }
 
 
-export default function AvatarsWidget() {
+export default function NetflixWidget() {
     const controls = useAnimation();
     const { startAnimation } = useAnimationCycle(controls);
 
