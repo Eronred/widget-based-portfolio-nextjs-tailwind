@@ -3,7 +3,7 @@ import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: "Erencan Arica - Frontend Developer",
+  title: "Erencan Arica - Design Engineer",
 };
 
 export default function RootLayout({
