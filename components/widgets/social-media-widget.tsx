@@ -12,7 +12,7 @@ export const SOCIAL_MEDIA_LINKS = [
     },
     {
         name: 'LinkedIn',
-        url: "https://www.linkedin.com/in/eronred/",
+        url: "https://www.linkedin.com/in/erencanarica/",
         icons: 'linkedin.svg',
         bgColor: 'bg-linkedin-brand'
     },
