@@ -26,6 +26,7 @@ import AirbnbImageAnimation from "@/components/airbnb-animation";
 import AvatarWidget from "@/components/widgets/avatar-widget";
 import NetflixWidget from "@/components/widgets/netflix-widget";
 import MilestoneWidget from "@/components/widgets/milestone-widget";
+import NPThinkingFolderWidget from "@/components/widgets/np-thinking-folder";
 const Page: React.FC = () => {
   return (
     <motion.div
@@ -44,6 +45,7 @@ const Page: React.FC = () => {
       <CoolTimer />
       <AvatarWidget />
       <NetflixWidget />
+      <NPThinkingFolderWidget />
       <FTWidget />
       <AirbnbImageAnimation />
       <MilestoneWidget />
@@ -52,11 +54,7 @@ const Page: React.FC = () => {
       <SwipeCarouselWidget />
       <CodeWidget />
       <GithubHeatmap />
-      <QuoteWidget
-        quote="The only way to do great work is to love what you do. If you haven' t found it yet, keep looking. Don't settle."
-        author="Steve Jobs"
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiMjHAVVQo6BRB5QEqZLhAus79xn9XCLvzw&s"
-      />
+      <QuoteWidget />
       <LargeGridCard
         title="Framer Motion"
         url="https://x.com/imeronn/status/1796874529190379949"

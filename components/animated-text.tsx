@@ -30,13 +30,13 @@ const AnimatedContentLink: React.FC<AnimatedContentLinkProps> = (
     const isUrl = url ? url : "#"
     return (
         <span
-            className='inline-flex items-center ml-2 mr-2'>
+            className='inline-flex items-center ml-1 mr-2'>
             {
                 label &&
                 <Link
                     href={isUrl}
                     target='_blank'
-                    className={url ? 'underline sm:ml-2' : ''}>
+                    className={url ? 'underline sm:ml-1' : ''}>
                     {label}
                 </Link>
             }
